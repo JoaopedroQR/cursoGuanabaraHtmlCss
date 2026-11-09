@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'idroid';
+    src: url('fonts/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    /*
+    Tipos de format()
+    - opentype (otf)
+    - truetype (ttf)
+    - embedded-opentype
+    truetype-aat (Apple advanced Typography)
+    - svg
+    */
+}
+
 *{
     height: 100%;
 }
@@ -10,7 +25,7 @@ body{
 
 header{
 
-    background-image: linear-gradient(to top, #1B5936 55%, #22733F, #2A8C4C, #39BF68 90%);
+    background-image: linear-gradient(to top, #1B5936 65%, #22733F, #2A8C4C, #39BF68 90%);
     background-attachment: fixed;
     height: 250px;
 
@@ -42,11 +57,153 @@ header > h2{
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+header > nav {
+    height: 20px;
+}
+
 header > nav > a{
     text-align: left;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     text-decoration: none;
     color: white;
     margin: 10px;
+}
+
+main{
+    background-color: #39bf6852;
+    /* height: 3000px; */
+    height: auto;
+}
+
+main > section{
+    background-color: white;
+    margin: auto;
+    width: 900px;
+    box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.288);
+    text-align: justify;
+}
+main > section > h1{
+    font-family: idroid, serif;
+    color:#1B5936;
+    height: 30px;
+    margin-top: 0%;
+    padding: 20px 0px 0px 10px;
+}
+main > section > h2{
+    font-family: idroid, serif;
+    color:#1B5936;
+    background-image: linear-gradient(to right, #39bf6863, white);
+    height: 25px;
+    margin-top: 0%;
+    padding-left: 10px;
+}
+main > section > p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    margin: 10px 0px 50px 0px;
+    text-indent: 30px;
+}
+main > section > p > a{
+    color: #1B5936;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.especial{
+    color: #1B5936;
+    text-decoration: none;
+    font-weight: bold;
+}
+.especial::after{
+    content: "\1F517";
+}
+
+.destaque{
+    color: green;
+    font-weight: bold;
+}
+
+picture{
+    display: block;
+    height: 266px;
+    width: 800px;
+    margin: auto;
+}
+
+picture > img{
+    width: 800px;
+    height: 266px;
+}
+picture > source{
+    width: 510px;
+    height: 434px;
+}
+
+aside{
+    background-color:#1B5936;
+    height: 600px;
+    box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.288);
+}
+
+iframe{
+    display: block;
+    height: 560px;
+    width: 850px;
+    padding: 20px 0px 20px 0px;
+    margin: auto;
+}
+
+section > article {
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+section > article > h3{
+    height: 20px;
+    width: 700px;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    background-color:#39BF68 ;
+    border-radius: 10px 10px 0px 0px;
+}
+section > article > p{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #39bf6852;
+    height: 30px;
+    width: 680px;
+    margin: auto;
+    padding: 10px 20px 20px 20px;
+    text-indent: 30px;
+}
+section > article > ul{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #39bf6852;
+    width: 680px;
+    margin: auto;
+
+}
+section > article > ul> li{
+    text-decoration: underline;
+
+}
+
+footer{
+    margin-top: 15px;
+    background-color: #1B5936;
+    height: 30px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+footer > p{
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 8px;
 }
