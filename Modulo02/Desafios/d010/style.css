@@ -1,27 +1,34 @@
 @charset "UTF-8";
 
+:root{
+    --cor0: #39BF68;
+    --cor1: #2A8C4C;
+    --cor2: #22733F;
+    --cor3: #1B5936;
+    --cor4: #39bf6852;
+    --cor5: black;
+    --font0: Arial, Helvetica, sans-serif;
+    --font1: 'Bebas Neue', cursive;
+    --font2: 'Android', sans-serif;
+}
+
 @font-face {
     font-family: 'idroid';
     src: url('fonts/idroid.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    /*
-    Tipos de format()
-    - opentype (otf)
-    - truetype (ttf)
-    - embedded-opentype
-    truetype-aat (Apple advanced Typography)
-    - svg
-    */
 }
 
 *{
     margin: 0; 
     padding: 0;
+    line-height: 1.5em;
 }
 
 body{
-    margin: 0;
+    background-color: var(--cor4);
+    /* color: var(--cor0); */
+    font-family: var(--font0);
 }
 
 header{
@@ -46,12 +53,11 @@ header > h1{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.342);
-    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.425); */
 }
 
 header > h2{
     margin: auto;
-    height: 100px;
+    height: 90px;
     width: 430px;
     color: rgb(206, 206, 206);
     text-align: center;
@@ -59,6 +65,7 @@ header > h2{
     font-size: 1em;
     font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.425);
 }
 
 header > nav {
@@ -72,20 +79,32 @@ header > nav > a{
     font-weight: bold;
     text-decoration: none;
     color: white;
-    margin: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+header > nav > a:hover  {
+    transition: background-color 0.4s ease;
+    background-color:#39BF68;
+    color: black;
+    border-radius: 5px;
 }
 
 main{
     background-color: #39bf6852;
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
 }
 
 main > section{
     background-color: white;
-    margin: 0px 80px 0px 80px;
     box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.288);
     text-align:justify;
     text-overflow:ellipsis;
 }
+
+
 main > section > h1{
     font-family: idroid, serif;
     color:#1B5936;
@@ -93,6 +112,7 @@ main > section > h1{
     padding: 20px 0px 0px 10px;
     
 }
+
 main > section > h2{
     font-family: idroid, serif;
     color:#1B5936;
@@ -100,6 +120,7 @@ main > section > h2{
     margin-top: 0%;
     padding-left: 10px;
 }
+
 main > section > p{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
@@ -110,8 +131,14 @@ main > section > p{
 }
 main > section > p > a{
     color: #1B5936;
+    background-color: #39bf688e;
     text-decoration: none;
     font-weight: bold;
+    padding: 2px 2px 2px 2px;
+}
+
+main > section > p > a:hover{
+    text-decoration: underline;
 }
 
 .especial{
@@ -124,7 +151,7 @@ main > section > p > a{
 }
 
 .destaque{
-    color: green;
+    color: #1B5936;
     font-weight: bold;
 }
 
@@ -141,16 +168,26 @@ picture > source{
     display: block;
     margin: auto;
 }
-aside{
+
+
+div.video{
+    position: relative;
     background-color:#1B5936;
+    height: 0px;
     box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.288);
-    padding: 10px 0px 10px 0px;
+    /* margin-left: -20px;
+    margin-right: -20px; */
+    margin-bottom: 15px;
+    padding-bottom: 59%;
 
 }
 
-iframe{
-    display: block;
-    margin: auto;
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 section > article {
@@ -176,17 +213,17 @@ section > article > ul{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #39bf6852;
     margin: auto;
-
-}
-section > article > ul> li{
-    text-decoration: underline;
-
+    list-style-type: "\2714\0020\0020";
+    columns: 2;
+    list-style-position: inside;
+    padding: 3%;
 }
 
 footer{
-    margin-top: 15px;
     background-color: #1B5936;
     box-shadow: 1px 1px 1px 1px;
+    margin-top: -18px;
+    min-width: 400px;
 }
 
 footer > p{
